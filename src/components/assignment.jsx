@@ -1,0 +1,47 @@
+import React, { Component } from 'react';
+
+class Assignment extends Component {
+  render() {
+    const { name, info, color, grade } = this.props.subject;
+    return (
+      // (구글링)태그의 동적 style 적용은 아래와 같이 하면 됨
+      <div className="ass-container" style={{ backgroundColor: color }}>
+        <span className="ass-img" style={{ backgroundColor: color }}>
+          <p>{grade}</p>
+        </span>
+        <div className="ass-contents">
+          <div className="ass-name">{name}</div>
+          <div className="ass-info">{info}</div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19.5"
+          height="19.5"
+          viewBox="0 0 19.5 19.5"
+          className="close-btn"
+        >
+          <g
+            id="Icon_ionic-ios-close-circle-outline"
+            data-name="Icon ionic-ios-close-circle-outline"
+            transform="translate(-2.25 -2.25)"
+          >
+            <path
+              id="패스_1"
+              data-name="패스 1"
+              d="M15.53,14.47,13.059,12l2.47-2.47A.749.749,0,0,0,14.47,8.47L12,10.941,9.53,8.47A.749.749,0,0,0,8.47,9.53L10.941,12,8.47,14.47a.724.724,0,0,0,0,1.059.744.744,0,0,0,1.059,0L12,13.059l2.47,2.47a.753.753,0,0,0,1.059,0A.744.744,0,0,0,15.53,14.47Z"
+              fill="#fff"
+            />
+            <path
+              id="패스_2"
+              data-name="패스 2"
+              d="M12,3.563a8.434,8.434,0,1,1-5.967,2.47A8.382,8.382,0,0,1,12,3.563M12,2.25A9.75,9.75,0,1,0,21.75,12,9.749,9.749,0,0,0,12,2.25Z"
+              fill="#fff"
+            />
+          </g>
+        </svg>
+      </div>
+    );
+  }
+}
+
+export default Assignment;
